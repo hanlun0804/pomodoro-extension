@@ -1,0 +1,65 @@
+{
+  "name": "pomodoro",
+  "displayName": "Pomodoro",
+  "description": "A pomodoro timer",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "Pomodoro.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "Pomodoro.setTimer",
+        "category": "Pomodoro",
+        "title": "Set timer"
+      },
+      {
+        "command": "Pomodoro.seeSetup",
+        "category": "Pomodoro",
+        "title": "See setup"
+      },
+      {
+        "command": "Pomodoro.startTimer",
+        "category": "Pomodoro",
+        "title": "Start timer"
+      },
+      {
+        "command": "Pomodoro.stopTimer",
+        "category": "Pomodoro",
+        "title": "Stop timer"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.77.0",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "memento": "^0.0.8",
+    "momento": "^0.2.0",
+    "node-fetch": "^3.3.1",
+    "web-audio-api": "^0.2.2"
+  }
+}
